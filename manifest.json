@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Pokémon Data Finder",
+    "version": "1.0",
+    "description": "Displays Pokémon information directly on Google search results.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://pokeapi.co/*"
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "*.png",
+            "*.mp3"
+          ],
+          "matches": [
+            "<all_urls>"
+          ]
+        }
+      ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/search*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "icons": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
+  }
+  
