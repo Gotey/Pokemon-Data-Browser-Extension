@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Pokémon Data Finder",
+    "name": "PokéStats",
     "version": "1.0",
     "description": "Displays Pokémon information directly on Google search results.",
     "permissions": [
