@@ -72,6 +72,23 @@ function getTypesHTML(types) {
     return typeData;
 }
 
+// function to get the forms of the pokemon (doesn't work yet)
+/*
+async function getFormsHTML(pokemonName) {
+    let formNames = ['alolan', 'galarian', 'paldean', 'mega', 'gmax'];
+    let forms = '';
+    let speciesData = await fetchSpeciesData(pokemonName);
+    if (speciesData.varieties.length > 1) {
+        for (let i = 0; i < 2 speciesData.varieties.length; i++) {
+            // let name = speciesData.varieties[i].pokemon.name.split('-');
+            // let form = formNames[formNames.findIndex(name[1])] ? formNames[formNames.findIndex(name[1])] : '';
+            forms += `<img src="assets/pokeball.png" alt="${speciesData.varieties[i].pokemon.name} title="${speciesData.varieties[i].pokemon.name}">`;
+        }
+    }
+    return forms;
+}
+*/
+
 async function fetchPokemonData(pokemon) {
   try {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -84,6 +101,18 @@ async function fetchPokemonData(pokemon) {
     return null;
   }
 }
+
+async function fetchSpeciesData(pokemon) {
+    try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon}`);
+    if (!response.ok) throw new Error('Pokemon Species not found: ' + pokemon);
+    return await response.json();
+    } 
+    catch (error) {
+      console.error(error);
+      return null;
+    }
+  }
 
 // for modifying the card without having to call the API -- Only use for testing
 function fakePokemonData() {
@@ -113,6 +142,7 @@ async function displayPokemonData() {
     if (!searchInput) return;
 
     // for now just extract the first word and check how that goes
+
     let pokemonName = searchInput.value.trim().toLowerCase();
     pokemonName = pokemonName.split(' ')[0];
 
