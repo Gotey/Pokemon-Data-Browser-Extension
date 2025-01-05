@@ -1,5 +1,6 @@
 # Current looks and Features
-Right now the extension only shows the sprite, name, types, cries (if you click on the sprite), and Base Stats. It also has a cache with the latest 5 entries implemented because I was tired of having to call the API everytime. This is a screenshot of how it currently looks in both dark and light themes:
+Right now the extension only shows the sprite, name, types, cries (if you click on the sprite), and Base Stats. It also has a cache with the latest 5 entries implemented because I was tired of having to call the API everytime. This is a screenshot of how it currently looks in both dark and light themes with my goat Lugia:
+
 ![{3D14CEF9-C377-4590-AB77-D0FA3562B88E}](https://github.com/user-attachments/assets/e1208c49-34c4-4320-bd6c-462ffb7f7e49)
 ![image](https://github.com/user-attachments/assets/8d3d12ee-75f2-48e2-92a6-79551e844463)
 
