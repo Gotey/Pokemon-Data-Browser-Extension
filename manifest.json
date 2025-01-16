@@ -2,11 +2,8 @@
     "manifest_version": 3,
     "name": "PokéStats",
     "version": "1.0",
-    "description": "Displays Pokémon information directly on Google search results.",
-    "permissions": [
-      "activeTab",
-      "scripting"
-    ],
+    "description": "Displays Pokémon information directly on Google search results!",
+    "permissions": [],
     "host_permissions": [
       "*://pokeapi.co/*"
     ],
